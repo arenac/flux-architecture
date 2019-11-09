@@ -1,10 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-// import Routes from './routes';
+import Routes from './routes';
 // import GlobalStyle from './styles/global';
 
 function App() {
-  return <h1>Hello Redux</h1>
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
 }
 
 export default App;
