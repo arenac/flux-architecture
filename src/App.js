@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import GlobalStyle from './styles/global';
 import Header from './components/Header';
+
+import './config/ReactotronConfig'; // should be before store
 import store from './store';
 
 function App() {
