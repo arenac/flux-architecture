@@ -9,7 +9,7 @@ import { formatPrice } from '../../utils/format';
 
 import * as CartActions from '../../store/modules/cart/actions';
 
-const Home = props => {
+const Home = ({ addToCartRequest, amount }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,10 +24,8 @@ const Home = props => {
     fetchProducts();
   }, []);
 
-  const handleAddProduct = product => {
-    const { addToCart } = props;
-
-    addToCart(product);
+  const handleAddProduct = id => {
+    addToCartRequest(id);
   };
 
   return (
@@ -38,10 +36,10 @@ const Home = props => {
           <strong>{product.title}</strong>
           <span>{product.priceFormated}</span>
 
-          <button type="button" onClick={() => handleAddProduct(product)}>
+          <button type="button" onClick={() => handleAddProduct(product.id)}>
             <div>
               <MdAddShoppingCart size={16} color="#fff" />
-              {props.amount[product.id] || 0}
+              {amount[product.id] || 0}
             </div>
 
             <span>Add to cart</span>
