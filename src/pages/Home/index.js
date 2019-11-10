@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { ProductList } from './styles';
 
@@ -41,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect()(Home);
