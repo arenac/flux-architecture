@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { MdShoppingCart } from 'react-icons/md';
+import React from './node_modules/react';
+import { Link } from './node_modules/react-router-dom';
+import { connect } from './node_modules/react-redux';
+import { MdShoppingCart } from './node_modules/react-icons/md';
 
 import { Container, Cart } from './styles';
 
