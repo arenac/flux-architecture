@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
@@ -24,12 +24,9 @@ const Home = ({ addToCartRequest, amount }) => {
     fetchProducts();
   }, []);
 
-  const handleAddProduct = useCallback(
-    id => {
-      addToCartRequest(id);
-    },
-    [addToCartRequest]
-  );
+  const handleAddProduct = id => {
+    addToCartRequest(id);
+  };
 
   return (
     <ProductList>
