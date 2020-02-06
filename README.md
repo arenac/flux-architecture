@@ -3,7 +3,7 @@
 A ReactJS Shoes Store with three main components who share data by using the flux architecture. The flux was implemented using Redux, and Saga middleware.
 
 <p align="center">
-  <img src="https://github.com/arenac/shoes-store-web/blob/master/doc/FuxArchitecture.gif" width="900" height="1000"/>
+  <img src="https://github.com/arenac/shoes-store-web/blob/master/docs/FuxArchitecture.gif" width="900" height="1000"/>
 </p>
 
 
